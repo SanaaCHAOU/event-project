@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Category;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/send-mail/{id}', 'MailSend@mailsend');
+
+
+
+Route::get('table-list', 'CategoryController@index');
+Route::get('category/create', 'CategoryController@create');
+Route::post('category', 'CategoryController@store');
+Route::get('category/{id}/edit', 'CategoryController@edit');
+Route::put('category/{id}', 'CategoryController@update');
+Route::delete('category/{id}', 'CategoryController@destroy');
+
+Route::get('demande/create', 'DemandeController@create');
+Route::post('demande', 'DemandeController@store');
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,7 +43,8 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('table-list', function () {
-		return view('pages.table_list');
+		$listcat = Category::all();
+        return view('pages.table_list', ['cat'=>$listcat]);
 	})->name('table');
 
 	Route::get('typography', function () {
@@ -59,5 +77,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+	
 });
 
