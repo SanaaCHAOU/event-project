@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Category;
+
+use App\Demandes;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,7 @@ Route::get('/', function () {
 
 Route::get('/send-mail/{id}', 'MailSend@mailsend');
 
+Route::get('/send-mail/delete/{id}', 'MailSend@mailsendrefus');
 
 
 Route::get('table-list', 'CategoryController@index');
@@ -30,7 +33,10 @@ Route::put('category/{id}', 'CategoryController@update');
 Route::delete('category/{id}', 'CategoryController@destroy');
 
 Route::get('demande/create', 'DemandeController@create');
-Route::post('demande', 'DemandeController@store');
+Route::post('demande/', 'DemandeController@store');
+Route::delete('demande/{id}', 'DemandeController@destroy');
+Route::get('demande/{id}/edit', 'DemandeController@edit');
+
 
 
 
@@ -60,7 +66,8 @@ Route::group(['middleware' => 'auth'], function () {
 	})->name('map');
 
 	Route::get('notifications', function () {
-		return view('pages.notifications');
+		$list=Demandes::all();
+		return view('pages.notifications', ['liste' =>$list]);
 	})->name('notifications');
 
 	Route::get('rtl-support', function () {

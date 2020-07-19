@@ -16,7 +16,6 @@ class DemandeController extends Controller
 
     public function store(Request $req){
         $cat = new Demandes();
-        $list=Demandes::all();
         $cat->nom= $req->input('nom');
         $cat->prenom= $req->input('prenom');
         $cat->email= $req->input('email');
@@ -24,10 +23,20 @@ class DemandeController extends Controller
         $cat->sujet= $req->input('sujet');
 
         $cat->save();
-        return view('pages.list', ['liste' =>$list]);
-        
+        return view('pages.notifications');
         
     
+    }
+    public function edit($id){
+        $listdem = Demandes::find($id);
+        return view('pages.list', ['dmd' => $listdem]);
 
     }
+
+    public function destroy($id){
+        $listet=Demandes::all();
+        $listcat = Demandes::find($id);
+        $listcat->delete();
+        return view('pages.notifications', ['liste' =>$listet]);
+	}
 }

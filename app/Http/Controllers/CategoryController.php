@@ -50,8 +50,6 @@ class CategoryController extends Controller
         $listcat->delete();
         return redirect('table-list');
 
-
-        
-    	
+	
     }
 }
