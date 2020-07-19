@@ -61,3 +61,9 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
+Route::get('/index', 'FrontController@index');
+Route::get('/about', 'FrontController@about'); 
+Route::get('/contact', 'FrontController@contact'); 
+Route::get('/events', 'FrontController@events'); 
+Route::get('/faq', 'FrontController@faq'); 
+Route::get('/registre', 'FrontController@registre'); 
