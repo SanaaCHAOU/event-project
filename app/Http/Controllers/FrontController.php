@@ -37,4 +37,9 @@ class FrontController extends Controller
     return view('FrontEnd.registre');
 
    }
+       public function loginT(){
+
+    return view('FrontEnd.loginT');
+
+   }
 }

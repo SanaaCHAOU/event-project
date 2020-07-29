@@ -67,3 +67,4 @@ Route::get('/contact', 'FrontController@contact');
 Route::get('/events', 'FrontController@events'); 
 Route::get('/faq', 'FrontController@faq'); 
 Route::get('/registre', 'FrontController@registre'); 
+Route::get('/loginT', 'FrontController@loginT'); 

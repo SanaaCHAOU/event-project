@@ -85,7 +85,7 @@
       <div class="custom-accordion" id="accordion_1">
         <div class="accordion-item">
           <h2 class="mb-0">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How to download and register?</button>
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How register?</button>
         </h2>
 
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion_1">

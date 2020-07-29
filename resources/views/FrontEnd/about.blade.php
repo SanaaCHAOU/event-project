@@ -59,13 +59,13 @@
   </nav>
   
 
-  <div class="untree_co--hero" style="background-image: url('{{ asset('FrontEnd')}}/images/bg_1.jpg')">
+  <div class="untree_co--hero" style="background-image: url('{{ asset('FrontEnd')}}/images/pk11.jpg')">
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-7">
           <div class="intro text-center">
             <h1 class="text-black" data-aos="fade-up" data-aos-delay="100">Event App About Us</h1>
-            <div class="intro-desc" data-aos="fade-up" data-aos-delay="200"><p class="mb-4 text-black">You can achieve the same effect of the image background by visiting on <a href="https://duotone.shapefactory.co/" class="text-primary" target="_blank">this link</a>. Far far away, behind the word mountains, far from the countries Vokalia</p>
+           <!-- <div class="intro-desc" data-aos="fade-up" data-aos-delay="200"><p class="mb-4 text-black">You can achieve the same effect of the image background by visiting on <a href="https://duotone.shapefactory.co/" class="text-primary" target="_blank">this link</a>. Far far away, behind the word mountains, far from the countries Vokalia</p> -->
 
             </div>
           </div> <!-- /.intro -->
