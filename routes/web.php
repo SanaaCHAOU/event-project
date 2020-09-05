@@ -62,9 +62,10 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::get('/index', 'FrontController@index');
-Route::get('/about', 'FrontController@about'); 
+Route::get('/Categories', 'FrontController@Categories'); 
 Route::get('/contact', 'FrontController@contact'); 
 Route::get('/events', 'FrontController@events'); 
 Route::get('/faq', 'FrontController@faq'); 
 Route::get('/registre', 'FrontController@registre'); 
 Route::get('/loginT', 'FrontController@loginT'); 
+Route::post('insertUser', 'FrontController@insertUser' ) ;
