@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Category;
 
 use App\Demandes;
+
+use App\Evenement;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,10 +36,10 @@ Route::delete('category/{id}', 'CategoryController@destroy');
 
 Route::get('demande/create', 'DemandeController@create');
 Route::post('demande/', 'DemandeController@store');
-Route::delete('demande/{id}', 'DemandeController@destroy');
-Route::get('demande/{id}/edit', 'DemandeController@edit');
+Route::get('demande/edit/{id}', 'DemandeController@edit');
 
 
+Route::get('events/', 'EventsController@index')->name('Event');
 
 
 Auth::routes();

@@ -1,7 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Category;
+use App\User;
+use App\DB;
+use App\Demandes;
+use Redirect,Response;
+use Carbon\Carbon;
 class HomeController extends Controller
 {
     /**
@@ -21,6 +26,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $userData = Category::select(\DB::raw("COUNT(*) as count"))
+        ->whereYear('created_at', date('Y'))
+        ->groupBy(\DB::raw("Month(created_at)"))
+        ->pluck('count');
+
+        $category = Category::orderBy( 'id', 'ASC' )->get()->count();
+        $user = User::orderBy( 'id', 'ASC' )->get()->count();
+
+        return View('dashboard', compact('userData'), [ 'cat' =>  $category, 'usr' => $user ] );
     }
+
 }
+?>

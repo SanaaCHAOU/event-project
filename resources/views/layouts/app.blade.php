@@ -8,6 +8,8 @@
     <title>{{ __('MBISD-events') }}</title>
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('material') }}/img/apple-icon.png">
     <link rel="icon" type="image/png" href="{{ asset('material') }}/img/favicon.png">
+
+
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -30,9 +32,7 @@
 
         <div class="fixed-plugin">
           <div class="dropdown show-dropdown">
-            <a href="#" data-toggle="dropdown">
-              <i class="fa fa-cog fa-2x"> </i>
-            </a>
+
             <ul class="dropdown-menu">
               <li class="header-title"> Sidebar Filters</li>
               <li class="adjustments-line">
@@ -146,5 +146,6 @@
         <script src="{{ asset('material') }}/demo/demo.js"></script>
         <script src="{{ asset('material') }}/js/settings.js"></script>
         @stack('js')
+        <div id="container"></div>
     </body>
 </html>

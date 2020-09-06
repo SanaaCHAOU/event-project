@@ -1,5 +1,5 @@
-@extends('layouts.app', ['activePage' => 'demande', 'titlePage' => __('Demandes')])
 
+@extends('layouts.app', ['activePage' => 'Event', 'titlePage' => __('Table Evenement')])
 @section('content')
 
 <div class="content">
@@ -8,8 +8,8 @@
       <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-primary">
-              <h4 class="card-title ">Les Demandes</h4>
-              <p class="card-category"> toutes les Demandes qui ne sont pas encore acceptés sont affichés sur le tableau ci-dessous</p>
+              <h4 class="card-title ">The Events</h4>
+              <p class="card-category"> ALL Events Displayed In This Table </p>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -31,12 +31,7 @@
                     <th >
                       Sujet
                     </th>
-                    <th class="text-right">
-                      
-                    </th>
-                    <th class="text-right">
-                      
-                    </th>
+                    
                   </tr></thead>
                   <tbody>
                   
@@ -57,14 +52,7 @@
                         <td>
                         {{$list->sujet}}
                         </td>
-                        <td>
-                        <a href="{{ url('send-mail/'.$list->id)}}" class= "btn btn-primary" name="oui">Accepter</a>
-                        </td>
-                        <td>
-                      
-                        <a href="{{ url('/demande/edit/'.$list->id)}}" class="btn btn-danger " name="annuler" type="submit" >Annuler</a></td>
-                        </td>
-                       
+                        
                       </tr>
                       @endforeach
                                         </tbody>

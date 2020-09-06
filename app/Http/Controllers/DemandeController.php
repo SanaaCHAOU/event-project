@@ -33,10 +33,4 @@ class DemandeController extends Controller
 
     }
 
-    public function destroy($id){
-        $listet=Demandes::all();
-        $listcat = Demandes::find($id);
-        $listcat->delete();
-        return view('pages.notifications', ['liste' =>$listet]);
-	}
 }

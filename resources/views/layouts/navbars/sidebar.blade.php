@@ -6,7 +6,7 @@
   -->
   <div class="logo">
     <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('Creative Tim') }}
+      {{ __('BISD-EVENTS') }}
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -19,26 +19,35 @@
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
-          <p>{{ __('Laravel Examples') }}
+          <i class="material-icons">content_paste</i>
+          <p>{{ __('Tableaux') }}
             <b class="caret"></b>
           </p>
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('profile.edit') }}">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('User profile') }} </span>
+            <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('table') }}">
+                <i class="material-icons">content_paste</i>
+                  <p>{{ __('Table Catégories') }}</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav">
+            <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ url('events/')}}">
+                <i class="material-icons">content_paste</i>
+                  <p>{{ __('Table Evenement') }}</p>
               </a>
             </li>
           </ul>
         </div>
       </li>
-      <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('table') }}">
-          <i class="material-icons">content_paste</i>
-            <p>{{ __('Table List') }}</p>
+
+      <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('profile.edit') }}">
+          <i class="material-icons">perm_identity</i>
+            <p>{{ __('User profile') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">
@@ -49,8 +58,8 @@
       </li>
       <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('notifications') }}">
-          <i class="material-icons">notifications</i>
-          <p>{{ __('Notifications') }}</p>
+          <i class="material-icons">chrome_reader_mode</i>
+          <p>{{ __('Demandes') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
@@ -59,7 +68,7 @@
           <p>{{ __('RTL Support') }}</p>
         </a>
       </li>
-     
+
     </ul>
   </div>
 </div>

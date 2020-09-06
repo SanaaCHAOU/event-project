@@ -7,26 +7,38 @@ use Illuminate\Support\Facades\Mail;
 use \App\Mail\SendMail;
 
 use App\Demandes;
+use App\Evenement;
 
 class MailSend extends Controller
 {
-    public function mailsend($id){
+    public function mailsend( $id){
 		$list=Demandes::find($id);
-
-    	$details = [
-    		'title' => 'Title : Mail from Real Programmer',
-    		'body' => 'Body: This is for testing',];
-    	\Mail::to($list->email)->send( new SendMail($details));
-    	return view('emails.thanks');
+        $evt = new Evenement();
+		$evt->nom= $list->nom;
+        $evt->prenom= $list->prenom;
+        $evt->email= $list->email;
+        $evt->category= $list->category;
+        $evt->sujet= $list->sujet;
+		$evt->save();
+		Mail::send('emails.email', ["liste"=>$list], function($message) use($list) {
+			$message->to($list->email);
+			$message->subject('New email!!!');
+		});
+		$list->delete();
+    	return redirect()->back();
 	}
-	
-	public function mailsendrefus($id){
+
+
+	public function mailsendrefus($id ){
 		$list=Demandes::find($id);
-		$liste=Demandes::all();
-    	$details = [
-    		'title' => 'Title : Refus Mail from Real Programmer',
-    		'body' => 'Body: This is for testing refusing',];
-    	\Mail::to("$list->email")->send( new SendMail($details));
-    	return view('pages.notifications', ['liste' =>$liste]);
+		
+		Mail::send('emails.annulation', ["liste"=>$list], function($message) use($list) {
+			$message->to($list->email);
+			$message->subject('Annuler!!!');
+		});
+       
+		$list->delete();
+		$listet=Demandes::all();
+    	return view('pages.notifications', ['liste' =>$listet]);
     }
 }
