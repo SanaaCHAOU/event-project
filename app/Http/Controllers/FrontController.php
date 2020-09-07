@@ -12,9 +12,9 @@ class FrontController extends Controller
 
    }
 
-    public function about(){
+    public function Categories(){
 
-    return view('FrontEnd.about');
+    return view('FrontEnd.Categories');
 
    }
     public function contact(){
@@ -37,9 +37,31 @@ class FrontController extends Controller
     return view('FrontEnd.registre');
 
    }
-       public function loginT(){
+    public function loginT(){
 
     return view('FrontEnd.loginT');
 
    }
+
+    public function insertUser( Request $req ){
+
+      $firstName=$req-> input('firstName');
+      $lastName=$req-> input('lastName');
+      $email=$req-> input('email');
+      $password=$req-> input('password');
+      $age=$req-> input('age');
+      $city=$req-> input('city');
+      $category=$req-> input('select');
+
+
+      DB::table('users')->insert(
+      ['firstName'=>$firstName,'lastName'=>$lastName,'email'=>$email,'password'=>$password,'age'=>$age,'city'=>$city,'select'=>$Category] );
+
+      echo 'success'; 
+
+
+
+
+     }
 }
+

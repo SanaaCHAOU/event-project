@@ -43,7 +43,7 @@
 
         <ul class="js-clone-nav d-none d-lg-inline-block site-menu float-right">
           <li class="active"><a href="/index">Home</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/about">Categories</a></li>
           <li><a href="/events">Events</a></li>
           <li><a href="/registre">Registre</a></li>
           <li><a href="/faq">FAQ</a></li>

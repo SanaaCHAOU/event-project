@@ -44,7 +44,7 @@
 
         <ul class="js-clone-nav d-none d-lg-inline-block site-menu float-right">
           <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/Categories">Categories</a></li>
           <li><a href="/events">Events</a></li>
           <li><a href="/registre">Registre</a></li>
           <li><a href="/faq">FAQ</a></li>
@@ -159,7 +159,7 @@
                 <a href="{{ asset('FrontEnd')}}/images/gal_6.jpg" class="gal-item" data-fancybox="gal">
                   <img src="{{ asset('FrontEnd')}}/images/gal_9.jpg" alt="Image" class="img-fluid"></a>
               </div>
-             <h2 class="mb-0"><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> For More Categories clik Here </button>
+             <h2 class="mb-0"><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><a  href="/Categories"> For More Categories clik Here </a></button>
               </h2>
 
             </div>
@@ -177,18 +177,19 @@
         <div class="col-lg-6">
           <div class="custom-block" data-aos="fade-up" data-aos-delay="100">
           <h2 class="section-title">Sing up</h2> </br>
-          <form class="contact-form bg-white">
+          <form class="contact-form bg-white" action="/insertUser" method="post">
             <div class="row">
+              {{ csrf_field()}}
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="text-black" for="fname">First name</label>
-                  <input type="text" class="form-control" id="fname">
+                  <label class="text-black" for="firstName">First name</label>
+                  <input type="text" class="form-control" id="firstame">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="text-black" for="lname">Last name</label>
-                  <input type="text" class="form-control" id="lname">
+                  <label class="text-black" for="lastName">Last name</label>
+                  <input type="text" class="form-control" id="lastName">
                 </div>
               </div>
             </div>
