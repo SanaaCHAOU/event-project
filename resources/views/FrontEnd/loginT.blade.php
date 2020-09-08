@@ -42,7 +42,8 @@
   <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100">
-        <form class="login100-form validate-form" method="POST" action='submit1'>
+        <form class="login100-form validate-form" method="POST" action='userlogin'>
+          
           @csrf
           <span class="login100-form-title p-b-43">
           <h2>  Login </h2>

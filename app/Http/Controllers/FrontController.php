@@ -39,6 +39,14 @@ class FrontController extends Controller
     return view('FrontEnd.registre');
 
    }
+
+   public function homeUser(){
+        return view('FrontEnd.homeUser');
+
+
+   }
+
+
     public function loginT(){
 
     return view('FrontEnd.loginT');
@@ -62,7 +70,15 @@ class FrontController extends Controller
      return view('FrontEnd.loginT');
      
 
-  }    
+  }   
+
+
+/*
+    public function userhome(){
+
+    return view('FrontEnd.userhome');
+
+   } */
 
     public function save1( Request $req ){
 
@@ -74,10 +90,11 @@ class FrontController extends Controller
       $req->session()->put('data',$req->input());
       //return  view('FrontEnd.myprofile');
 
-     return view('FrontEnd.home.homeContenent');
+     //return  redirect('/userhome');
      
 
   }  
+
 
 
 }

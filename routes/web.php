@@ -54,13 +54,13 @@ Route::group(['middleware' => 'auth'], function () {
 	})->name('upgrade');
 });
 
-/*
+
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
-});*/
+});
 
 Route::get('/index', 'FrontController@index');
 Route::get('/Categories', 'FrontController@Categories'); 
@@ -70,6 +70,20 @@ Route::get('/faq', 'FrontController@faq');
 Route::get('/registre', 'FrontController@registre'); 
 Route::get('/loginT', 'FrontController@loginT'); 
 Route::post('submit', 'FrontController@save' ) ;
-Route::post('submit1', 'FrontController@save1' ) ;
-Route::post('/myprofile', 'FrontController@myprofile' ) ;
+Route::get('/homeUser', 'FrontController@homeUser');
 
+//Route::post('submit1', 'FrontController@save1' ) ;
+//Route::post('/myprofile', 'FrontController@myprofile' ) ;
+
+Route::view('/userlogin','userlogin');
+Route::Post('userlogin','profile@home');
+
+Route::get('/bonjour/{firstName}','profile@userhome');
+
+Route::get('userhome/', function () {
+
+	if (!session()->has('data')){
+		return redirect('index') ;
+	}
+    return view('userhome');
+});

@@ -48,6 +48,7 @@
           <li><a href="/registre">Registre</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact us</a></li>
+          <li><a href="/registre">log In </a></li>
         </ul>
 
         
