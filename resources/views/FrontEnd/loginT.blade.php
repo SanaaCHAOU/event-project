@@ -42,7 +42,8 @@
   <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100">
-        <form class="login100-form validate-form">
+        <form class="login100-form validate-form" method="POST" action='submit1'>
+          @csrf
           <span class="login100-form-title p-b-43">
           <h2>  Login </h2>
           </span>
@@ -81,34 +82,7 @@
         <button type="submit" class="btn btn-primary">Login  </button>
 
           </div>
-          
-        <!--  <div class="text-center p-t-46 p-b-20">
-            <span class="txt2">
-              or sign In using 
-            </span>
-          </div>
 
-          <div class="login100-form-social flex-c-m">
-            <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-              <i class="fa fa-facebook-f" aria-hidden="true"></i>
-            </a>
-
-            <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-
-            <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-              <i class="fa fa-github" aria-hidden="true"></i>
-            </a>
-
-            <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>-->
-
-      <!--  <div class="custom-block" data-aos="fade-up">
-          <center>
-          <h2 class="section-title">Or Sing Up via </h2>-->
           <div class="text-center p-t-46 p-b-20">
             <span class="txt2">
               or sign In using 

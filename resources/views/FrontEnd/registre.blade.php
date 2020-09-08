@@ -165,76 +165,64 @@
             </div>
           </div> <!-- END .custom-block -->
 
-     <!--     <div class="custom-block" data-aos="fade-up">
-            <h2 class="section-title">Video</h2>
-
-            <a href="https://vimeo.com/342333493" data-fancybox class="video-wrap">
-              <span class="play-wrap"><span class="icon-play"></span></span>
-              <img src="{{ asset('FrontEnd')}}/images/bg_1.jpg" alt="Image" class="img-fluid rounded">
-            </a>
-          </div> <!-- END .custom-block -->
         </div> <!-- /.col-lg-6 -->
         <div class="col-lg-6">
           <div class="custom-block" data-aos="fade-up" data-aos-delay="100">
           <h2 class="section-title">Sing up</h2> </br>
-          <form class="contact-form bg-white" action="/insertUser" method="post">
+        <form class="form" method="POST" action="submit">
+        @csrf
             <div class="row">
-              {{ csrf_field()}}
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="text-black" for="firstName">First name</label>
-                  <input type="text" class="form-control" id="firstame">
+                  <label class="text-black">First name</label>
+                  <input type="text" class="form-control" name="firstName" id="firstame">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label class="text-black" for="lastName">Last name</label>
-                  <input type="text" class="form-control" id="lastName">
+                  <input type="text" name="lastName" class="form-control" id="lastName">
                 </div>
               </div>
             </div>
             <div class="form-group">
               <label class="text-black" for="email">Email address</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
               <label class="text-black" for="password">Password</label>
-              <input type="password" class="form-control" id="password">
+              <input type="password" name="password" class="form-control" id="password">
             </div>
             <div class="form-group">
               <label class="text-black" for="age">Age</label>
-              <input type="number" class="form-control" id="age">
+              <input type="number" name="age" class="form-control" id="age">
             </div>
             <div class="form-group">
               <label class="text-black" for="city">City</label>
-              <input type="text" class="form-control" id="city">
+              <input type="text" name="city" class="form-control" id="city">
             </div>
             <div class="form-group">
               <label class="text-black" for="select"> Category </label>
-
-              <select name="" id="select" class="custom-select">
-                <option value="">Science</option>
-                <option value=""> INFORMATICS</option>
-                <option value=""> Data Science </option>
-                <option value=""> BioInformatics </option
-               <option value=""> Sociologie </option>
-                <option value=""> Art </option>
-
-
-
+              <input name="category" type='select' id="select" class="custom-select">
+                <option value="Science">Science</option>
+                <option value="info"> INFORMATICS</option>
+                <option value="data sciences"> Data Science </option>
+                <option value="bioinfo"> BioInformatics </option>
+               <option value="sociologie"> Sociologie </option>
+                <option value="art"> Art </option>
               </select>
 
             </div>
             <div class="form-group">
               <label class="control control--checkbox">
-                <span class="caption">Custom checkbox</span>
+                <span class="caption"> i accept all the rules o ur community </span>
                 <input type="checkbox" checked="checked" />
                 <div class="control__indicator"></div>
               </label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+      </form>
         </div>
 
         <div class="custom-block" data-aos="fade-up">
@@ -253,38 +241,6 @@
 
         <div class="custom-block" data-aos="fade-up" data-aos-delay="100">
         <!--  <h2 class="section-title text-center">Slider</h2>
-          <div class="owl-single owl-carousel no-nav">
-            <div class="testimonial mx-auto">
-              <figure class="img-wrap">
-                <img src="{{ asset('FrontEnd')}}/images/person_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <h3 class="name">Adam Aderson</h3>
-              <blockquote>
-                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-              </blockquote>
-            </div>
-
-            <div class="testimonial mx-auto">
-              <figure class="img-wrap">
-                <img src="{{ asset('FrontEnd')}}/images/person_3.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <h3 class="name">Lukas Devlin</h3>
-              <blockquote>
-                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-              </blockquote>
-            </div>
-
-            <div class="testimonial mx-auto">
-              <figure class="img-wrap">
-                <img src="{{ asset('FrontEnd')}}/images/person_4.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <h3 class="name">Kayla Bryant</h3>
-              <blockquote>
-                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-              </blockquote>
-            </div>
-
-          </div> -->
         </div>
         </div> <!-- /.col-lg-6 -->
       </div> <!-- /.row -->    
@@ -294,12 +250,6 @@
   <div class="site-footer">
     <div class="container">
       <div class="row justify-content-center mb-5">
-        <div class="col-lg-7 mx-auto text-center">
-          <h2 class="mb-4">Help Us Spread Our Works</h2>
-          <p><a href="https://untree.co/" target="_blank" class="btn btn-primary text-white">Share them to social media! Thanks :)</a></p>
-        </div> <!-- /.col-lg-7 -->
-      </div> <!-- /.row -->
-      <div class="row">
         <div class="col-lg-4">
           <div class="widget">
             <h3>Contact</h3>

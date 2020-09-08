@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Userf;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -43,25 +45,40 @@ class FrontController extends Controller
 
    }
 
-    public function insertUser( Request $req ){
 
-      $firstName=$req-> input('firstName');
-      $lastName=$req-> input('lastName');
-      $email=$req-> input('email');
-      $password=$req-> input('password');
-      $age=$req-> input('age');
-      $city=$req-> input('city');
-      $category=$req-> input('select');
+    public function save( Request $req ){
+
+       //print_r($req->input());
+       $user = new Userf;
+      $user->firstName=$req->firstName;
+      $user->lastName=$req->lastName;
+      $user->email=$req->email;
+      $user->password=$req->password;
+      $user->age=$req->age;
+      $user->city=$req->city;
+      $user->category=$req->category;
+      $user->save();
+
+     return view('FrontEnd.loginT');
+     
+
+  }    
+
+    public function save1( Request $req ){
+
+      //print_r($req->input());
+      // $user = new Userf;
+     // $user->email=$req->email;
+   //   $user->password=$req->password;
+     // $user->login();
+      $req->session()->put('data',$req->input());
+      //return  view('FrontEnd.myprofile');
+
+     return view('FrontEnd.home.homeContenent');
+     
+
+  }  
 
 
-      DB::table('users')->insert(
-      ['firstName'=>$firstName,'lastName'=>$lastName,'email'=>$email,'password'=>$password,'age'=>$age,'city'=>$city,'select'=>$Category] );
-
-      echo 'success'; 
-
-
-
-
-     }
 }
 
