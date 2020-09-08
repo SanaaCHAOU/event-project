@@ -18,7 +18,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 .table-wrapper {
-    width: 1100px;
+    width: 2200px;
     margin: 30px auto;
     background: #fff;
     padding: 20px;
@@ -50,10 +50,11 @@ table.table {
 }
 table.table tr th, table.table tr td {
     border-color: #e9e9e9;
+    font-size : 12px;
 }
 table.table th i {
     font-size: 13px;
-    margin: 0 5px;
+    margin: 0 px;
     cursor: pointer;
 }
 table.table th:last-child {
@@ -108,6 +109,15 @@ $(document).ready(function(){
             '<td><input type="text" class="form-control" name="Titre" id="Titre"></td>' +
             '<td><input type="text" class="form-control" name="Organisation" id="Organisation"></td>' +
             '<td><input type="text" class="form-control" name="Type" id="Type"></td>' +
+            '<td><input type="text" class="form-control" name="Link" id="Link"></td>' +
+            '<td><input type="text" class="form-control" name="Description" id="Description"></td>' +
+            '<td><input type="text" class="form-control" name="Nbjours" id="Nbjours"></td>' +
+            '<td><input type="text" class="form-control" name="Datedebut" id="Datedebut"></td>' +
+            '<td><input type="text" class="form-control" name="Datefin" id="Datefin"></td>' +
+            '<td><input type="text" class="form-control" name="Adresse" id="Adresse"></td>' +
+            '<td><input type="text" class="form-control" name="Email" id="Email"></td>' +
+            '<td><input type="text" class="form-control" name="Tel" id="Tel"></td>' +
+            '<td><input type="text" class="form-control" name="Lienflyer" id="Lienflyer"></td>' +
             '<td><input type="text" class="form-control" name="Categorie" id="Categorie"></td>' +
             '<td><input type="text" class="form-control" name="Visibilite" id="Visibilite"></td>' +
 			'<td>' + actions + '</td>' +
@@ -171,8 +181,18 @@ $(document).ready(function(){
                         <th>Titre</th>
                         <th>Organisation</th>
                         <th>Type</th>
+                        <th> Link </th>
+                        <th> Description </th>
+                        <th> Nb jours </th>
+                        <th> Date début </th>
+                        <th> Date fin </th>
+                        <th> Adresse </th>
+                        <th> Email </th>
+                        <th> Tel </th>
+                        <th> Lien flyer </th>
                         <th>Catégorie</th>
                         <th> Visibilié </th>
+                        <th> Statut </th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -181,8 +201,18 @@ $(document).ready(function(){
                         <td>Ensa event</td>
                         <td>Ensa</td>
                         <td>webinair</td>
-                        <td>Bioinformatique</td>
+                        <td>linkexample.com</td>
+                        <td>descriptionEvent</td>
+                        <td>5</td>
+                        <td>10/08/20</td>
+                        <td>15/08/20</td>
+                        <td>tanger</td>
+                        <td>event1@gmail.com</td>
+                        <td>053998765</td>
+                        <td>flyerlink</td>
+                        <td>webinair</td>
                         <td>Public</td>
+                        <th> Accepté </th>
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
@@ -193,8 +223,19 @@ $(document).ready(function(){
                         <td>Conf 1</td>
                         <td>ENSA Tanger</td>
                         <td>Conférence</td>
-                        <td>Big data / sciences de données </td>
+                        <td>linkexample.com</td>
+                        <td>descriptionEvent</td>
+                        <td>5</td>
+                        <td>10/08/20</td>
+                        <td>15/08/20</td>
+                        <td>tanger</td>
+                        <td>event1@gmail.com</td>
+                        <td>053998765</td>
+                        <td>flyerlink</td>
+                        <td>Conférence</td>
                         <td>Privé </td>
+                        <th> Accepté </th>
+
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
@@ -205,8 +246,18 @@ $(document).ready(function(){
                         <td>Sém 1</td>
                         <td>ENSA Kenitra</td>
                         <td>Séminaire</td>
-                        <td>Bioinformatique</td>
+                        <td>linkexample.com</td>
+                        <td>descriptionEvent</td>
+                        <td>5</td>
+                        <td>10/08/20</td>
+                        <td>15/08/20</td>
+                        <td>tanger</td>
+                        <td>event1@gmail.com</td>
+                        <td>053998765</td>
+                        <td>flyerlink</td>
+                        <td>Séminaire</td>
                         <td>Public</td>
+                        <th> En cours </th>
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
