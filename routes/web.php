@@ -69,3 +69,13 @@ Route::get('/faq', 'FrontController@faq');
 Route::get('/registre', 'FrontController@registre');
 Route::get('/loginT', 'FrontController@loginT');
 Route::post('insertUser', 'FrontController@insertUser' ) ;
+
+
+
+Route::get('userhome/', function () {
+
+    if (!session()->has('data')){
+        return redirect('index') ;
+    }
+    return view('userhome');
+
