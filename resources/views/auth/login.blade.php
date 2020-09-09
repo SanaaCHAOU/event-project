@@ -3,14 +3,18 @@
 @section('content')
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
-    <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+    <!--
+  <div class="col-lg-4 col-md-6 col-sm-8  ">
+    <a href="https://ibb.co/spfXPCQ"><img src="https://i.ibb.co/JW1Sdq2/log.png" alt="log" border="0"></a>
+        </div>-->
+    <div class="col-lg-4 col-md-6 col-sm-8 ml-auto ">
       <form class="form" method="POST" action="{{ route('login') }}">
         @csrf
 
         <div class="card card-login card-hidden mb-3">
-          <div class="card-header card-header-primary text-center">
-            <h4 class="card-title"><strong>{{ __('Login') }}</strong></h4>
-
+          <div class="card-header card-header-info text-center">
+            <h4 class="card-title"><strong><br> {{ __('Login') }} </strong></h4>
+              <br>
           </div>
           <div class="card-body">
             <p class="card-description text-center">{{ __('Your Email  ') }} <strong>admin@gmail.com</strong> {{ __(' and your password ') }} </p>
@@ -54,7 +58,7 @@
             </div>
           </div>
           <div class="card-footer justify-content-center">
-            <button type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Lets Go') }}</button>
+            <button type="submit" class="btn btn-info btn-link btn-lg">{{ __('Lets Go') }}</button>
           </div>
         </div>
       </form>

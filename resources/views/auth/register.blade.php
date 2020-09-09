@@ -3,12 +3,16 @@
 @section('content')
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
-    <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+    <!--
+  <div class="col-lg-4 col-md-6 col-sm-8  ">
+    <a href="https://ibb.co/spfXPCQ"><img src="https://i.ibb.co/JW1Sdq2/log.png" alt="log" border="0"></a>
+        </div>-->
+    <div class="col-lg-4 col-md-6 col-sm-8 ml-auto ">
       <form class="form" method="POST" action="{{ route('register') }}">
         @csrf
 
         <div class="card card-login card-hidden mb-3">
-          <div class="card-header card-header-primary text-center">
+          <div class="card-header card-header-info text-center">
             <h4 class="card-title"><strong>{{ __('Register') }}</strong></h4>
             <div class="social-line">
               <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
@@ -86,7 +90,7 @@
             </div>
             <div class="form-check mr-auto ml-3 mt-3">
               <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" id="policy" name="policy" {{ old('policy', 1) ? 'checked' : '' }} >
+                <input class="form-check-input" style="color:#00BFFF" type="checkbox" id="policy" name="policy" {{ old('policy', 1) ? 'checked' : '' }} >
                 <span class="form-check-sign">
                   <span class="check"></span>
                 </span>
@@ -95,7 +99,7 @@
             </div>
           </div>
           <div class="card-footer justify-content-center">
-            <button type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Create account') }}</button>
+            <button type="submit" class="btn btn-info  btn-link btn-lg">{{ __('Create account') }}</button>
           </div>
         </div>
       </form>

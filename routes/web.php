@@ -38,6 +38,9 @@ Route::get('demande/create', 'DemandeController@create');
 Route::post('demande/', 'DemandeController@store');
 Route::get('demande/edit/{id}', 'DemandeController@edit');
 
+//Route::get('demandeOrganiserEvent', 'inscrit.demandeOrganiserEvent');
+
+
 
 Route::get('events/', 'EventsController@index')->name('Event');
 
@@ -50,6 +53,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('newEvent', function () {
+        return view('inscrit.newEvent');
+	})->name('newEvent');
+	
 	Route::get('table-list', function () {
 		$listcat = Category::all();
         return view('pages.table_list', ['cat'=>$listcat]);
