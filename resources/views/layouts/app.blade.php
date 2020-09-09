@@ -16,6 +16,13 @@
     <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
+
+
+    <!-- JQuery & JS GRID -->
+    <script src="{{ asset('material') }}/js/core/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
@@ -27,7 +34,7 @@
         @guest()
             @include('layouts.page_templates.guest')
         @endguest
-        
+
         <div class="fixed-plugin">
           <div class="dropdown show-dropdown">
             <a href="#" data-toggle="dropdown">
@@ -91,7 +98,7 @@
               <li class="button-container github-star">
                 <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard-laravel" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
               </li>
-              <li class="header-title">Thank you for 95 shares!</li>
+              <li class="header-title"></li>
               <li class="button-container text-center">
                 <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
                 <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
@@ -102,7 +109,6 @@
           </div>
         </div>
         <!--   Core JS Files   -->
-        <script src="{{ asset('material') }}/js/core/jquery.min.js"></script>
         <script src="{{ asset('material') }}/js/core/popper.min.js"></script>
         <script src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js"></script>
         <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
@@ -145,6 +151,12 @@
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
         <script src="{{ asset('material') }}/demo/demo.js"></script>
         <script src="{{ asset('material') }}/js/settings.js"></script>
+        <script src="{{ asset('material') }}/js/jsgrid/dist/jsgrid.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="{{ asset('material') }}/js/jsgrid/src/fields/jsgrid.field.date.js"></script>
+
         @stack('js')
     </body>
+
 </html>

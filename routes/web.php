@@ -25,6 +25,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('events-list', function () {
+		return view('pages.events_list');
+    })->name('events-list');
+
+    Route::get('users-list', function () {
+		return view('pages.users_list');
+    })->name('users-list');
+
 	Route::get('table-list', function () {
 		return view('pages.table_list');
 	})->name('table');
