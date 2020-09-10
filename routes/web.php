@@ -40,8 +40,6 @@ Route::get('demande/edit/{id}', 'DemandeController@edit');
 
 
 Route::get('events/', 'EventsController@index')->name('Event');
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -86,6 +84,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
-	
-});
+    Route::get('user_details', ['as' => 'user_details.complete', 'uses' => 'userDetailsController@complete']);
+	Route::get('user_details', ['as' => 'user_details.organize', 'uses' => 'userDetailsController@organize']);
 
+});

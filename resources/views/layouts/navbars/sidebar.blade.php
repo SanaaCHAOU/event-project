@@ -6,7 +6,7 @@
   -->
   <div class="logo">
     <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('BISD-EVENTS') }}
+      {{ __('App Events') }}
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -15,6 +15,42 @@
         <a class="nav-link" href="{{ route('home') }}">
           <i class="material-icons">dashboard</i>
             <p>{{ __('Dashboard') }}</p>
+        </a>
+      </li>
+
+<!-- inscrit debut -->
+<li class="nav-item {{ ($activePage == 'complete' || $activePage == 'folowing') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
+          <i class="material-icons">content_paste</i>
+          <p>{{ __(' My Profile') }}
+            <b class="caret"></b>
+          </p>
+        </a>
+        <div class="collapse show" id="laravelExample">
+          <ul class="nav">
+            <li class="nav-item{{ $activePage == 'complete' ? ' active' : '' }}">
+              <a class="nav-link" href="">
+                <i class="material-icons">content_paste</i>
+                  <p>{{ __('Complete Registration') }}</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav">
+            <li class="nav-item{{ $activePage == 'folowing' ? ' active' : '' }}">
+              <a class="nav-link" href="">
+                <i class="material-icons">content_paste</i>
+                  <p>{{ __('flowing Events') }}</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+<!--inscrit  fin -->
+     <li>
+      <li class="nav-item{{ $activePage == 'organize' ? ' active' : '' }}">
+        <a class="nav-link" href="">
+          <i class="material-icons">perm_identity</i>
+            <p>{{ __('Organize Events') }}</p>
         </a>
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
@@ -43,7 +79,6 @@
           </ul>
         </div>
       </li>
-
       <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('profile.edit') }}">
           <i class="material-icons">perm_identity</i>
