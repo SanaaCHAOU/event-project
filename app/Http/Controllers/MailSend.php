@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use \App\Mail\SendMail;
 
 use App\Demandes;
-use App\Evenement;
+use App\Events_details;
 
 class MailSend extends Controller
 {

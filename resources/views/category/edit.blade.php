@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="post" action="{{ url('category/'.$cat->id) }}" autocomplete="off" class="form-horizontal">
+          <form method="post" action="{{ url('category/'.$cat->category_id) }}" autocomplete="off" class="form-horizontal">
             <input type="hidden" name="_method" value="put">
               {{ csrf_field()}}
 
@@ -32,7 +32,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('Category') }}</label>
                   <div class="col-sm-7">
                     <div>
-                      <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="category"  value="{{ $cat->category }}"/>
+                      <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="category"  value="{{ $cat->category_label }}"/>
                      
                     </div>
                   </div>

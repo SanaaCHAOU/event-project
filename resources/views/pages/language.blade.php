@@ -93,18 +93,7 @@
               <p>اعلان‌ها</p>
             </a>
           </li>
-          <li class="nav-item active  ">
-            <a class="nav-link" href="{{ route('language') }}">
-              <i class="material-icons">language</i>
-              <p>پشتیبانی از راست به چپ</p>
-            </a>
-          </li>
-           <li class="nav-item active-pro ">
-                <a class="nav-link" href="{{ route('upgrade') }}">
-                    <i class="material-icons">unarchive</i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li> 
+          
         </ul>
       </div>
     </div>

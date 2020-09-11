@@ -37,20 +37,20 @@
                   @foreach($cat as $ct)
                     <tr>
                         <td>
-                          {{$ct->id}}
+                          {{$ct->category_id}}
                         </td>
                         <td>
-                        {{$ct->category}}
+                        {{$ct->category_label}}
                         </td>
                         <td>
                         {{$ct->description}}
                         </td>
                         <td class="td-actions text-right">
-                        <form action="{{ url('category/'.$ct->id) }}" method="post">
+                        <form action="{{ url('category/'.$ct->category_id) }}" method="post">
 
                              		{{ csrf_field()}}
                 	            	{{ method_field('DELETE')}}
-                        <a href="{{ url('category/'.$ct->id.'/edit')}}" class="btn btn-success btn-link"><i class="material-icons">edit</i></a>
+                        <a href="{{ url('category/'.$ct->category_id.'/edit')}}" class="btn btn-success btn-link"><i class="material-icons">edit</i></a>
                         <a href="" ><i class="material-icons">update</i></a>
                         <button class="btn btn-danger btn-link"><i class="material-icons">delete</i></button>
 

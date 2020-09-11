@@ -2,11 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Category;
+use App\Categories;
 
 use App\Demandes;
 
-use App\Evenement;
+use App\Events_details;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,9 +30,9 @@ Route::get('/send-mail/delete/{id}', 'MailSend@mailsendrefus');
 Route::get('table-list', 'CategoryController@index');
 Route::get('category/create', 'CategoryController@create');
 Route::post('category', 'CategoryController@store');
-Route::get('category/{id}/edit', 'CategoryController@edit');
-Route::put('category/{id}', 'CategoryController@update');
-Route::delete('category/{id}', 'CategoryController@destroy');
+Route::get('category/{category_id}/edit', 'CategoryController@edit');
+Route::put('category/{category_id}', 'CategoryController@update');
+Route::delete('category/{category_id}', 'CategoryController@destroy');
 
 Route::get('demande/create', 'DemandeController@create');
 Route::post('demande/', 'DemandeController@store');
@@ -59,7 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
 	})->name('newEvent');
 	
 	Route::get('table-list', function () {
-		$listcat = Category::all();
+		$listcat = Categories::all();
         return view('pages.table_list', ['cat'=>$listcat]);
 	})->name('table');
 

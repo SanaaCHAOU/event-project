@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEventsDetailsTable extends Migration
+class CreateDemandesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEventsDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events_details', function (Blueprint $table) {
+        Schema::create('demandes', function (Blueprint $table) {
             $table->id('event');
             $table->string('title')->nullable(false);
             $table->string('type')->nullable(false);
@@ -27,7 +27,7 @@ class CreateEventsDetailsTable extends Migration
             $table->string('event_phone')->nullable(false);
             $table->string('event_email')->nullable(false);
             $table->enum('visibility', ['PRIVATE', 'RESERVED', 'PUBLIC']);
-            $table->enum('statut', ['ACCEPTED', 'REJECTED','IN_PROGRESS'])->default('IN_PROGRESS');
+            $table->string('statut')->default('IN_PROGRESS');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('organiser_id');
             $table->longText('flyer_link');
@@ -45,7 +45,6 @@ class CreateEventsDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events_details');
-
+        Schema::dropIfExists('demandes');
     }
 }
