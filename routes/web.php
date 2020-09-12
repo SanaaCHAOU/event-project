@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Category;
 
 use App\Demandes;
+use App\user_details;
+
 
 use App\Evenement;
 /*
@@ -37,6 +39,10 @@ Route::delete('category/{id}', 'CategoryController@destroy');
 Route::get('demande/create', 'DemandeController@create');
 Route::post('demande/', 'DemandeController@store');
 Route::get('demande/edit/{id}', 'DemandeController@edit');
+
+Route::get('details/create', 'UserDetailsController@create');
+Route::post('details/', 'UserDetailsController@store');
+
 
 //Route::get('demandeOrganiserEvent', 'inscrit.demandeOrganiserEvent');
 
@@ -79,6 +85,12 @@ Route::group(['middleware' => 'auth'], function () {
 		$list=Demandes::all();
 		return view('pages.notifications', ['liste' =>$list]);
 	})->name('notifications');
+
+	Route::get('details', function () {
+		$list=Demandes::all();
+		return view('pages.details');
+	})->name('details');
+
 
 	Route::get('rtl-support', function () {
 		return view('pages.language');

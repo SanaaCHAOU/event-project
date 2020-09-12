@@ -31,7 +31,7 @@ class HomeController extends Controller
         ->groupBy(\DB::raw("Month(created_at)"))
         ->pluck('count');
 
-        $category = Category::orderBy( 'id', 'ASC' )->get()->count();
+        $category = Category::orderBy( 'category_id', 'ASC' )->get()->count();
         $user = User::orderBy( 'id', 'ASC' )->get()->count();
 
         return View('dashboard', compact('userData'), [ 'cat' =>  $category, 'usr' => $user ] );

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Inscrit extends Model
+class user_details extends Model
 {
     //
 }

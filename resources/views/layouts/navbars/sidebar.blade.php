@@ -17,6 +17,12 @@
             <p>{{ __('Dashboard') }}</p>
         </a>
       </li>
+      <li class="nav-item{{ $activePage == 'details' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('details') }}">
+          <i class="material-icons">chrome_reader_mode</i>
+          <p>{{ __('User details') }}</p>
+        </a>
+      </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
           <i class="material-icons">content_paste</i>
@@ -61,6 +67,7 @@
           <i class="material-icons">chrome_reader_mode</i>
           <p>{{ __('Demandes') }}</p>
         </a>
+      </li>
       </li>
       <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('language') }}">
