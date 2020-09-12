@@ -54,7 +54,7 @@
 
     Highcharts.chart('container', {
         title: {
-            text: 'New User MBISD-Events, 2020'
+            text: 'New User Events App, 2020'
         },
         xAxis: {
             categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
