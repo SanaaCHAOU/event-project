@@ -72,10 +72,10 @@ Route::post('insertUser', 'FrontController@insertUser' ) ;
 
 
 
-Route::get('userhome/', function () {
+// Route::get('userhome/', function () {
 
-    if (!session()->has('data')){
-        return redirect('index') ;
-    }
-    return view('userhome');
+//     if (!session()->has('data')){
+//         return redirect('index') ;
+//     }
+//     return view('userhome');
 
