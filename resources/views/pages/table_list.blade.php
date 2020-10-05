@@ -40,7 +40,7 @@
                           {{$ct->id}}
                         </td>
                         <td>
-                        {{$ct->category}}
+                        {{$ct->category_label}}
                         </td>
                         <td>
                         {{$ct->description}}
@@ -66,6 +66,3 @@
 
 
 @endsection
-
-
-

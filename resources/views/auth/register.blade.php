@@ -3,10 +3,10 @@
 @section('content')
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
-    <!--
-  <div class="col-lg-4 col-md-6 col-sm-8  ">
-    <a href="https://ibb.co/spfXPCQ"><img src="https://i.ibb.co/JW1Sdq2/log.png" alt="log" border="0"></a>
-        </div>-->
+    <div class="col-lg-4 col-md-6 col-sm-8  ">
+
+         <br/>
+   </div>
     <div class="col-lg-4 col-md-6 col-sm-8 ml-auto ">
       <form class="form" method="POST" action="{{ route('register') }}">
         @csrf
@@ -89,6 +89,8 @@
               @endif
             </div>
             <div class="form-check mr-auto ml-3 mt-3">
+              <div class="g-recaptcha" data-sitekey="6LcIWdMZAAAAAI8lg7mj9-8NrCeWgAXfuhCnBFQt"></div>
+              <br>
               <label class="form-check-label">
                 <input class="form-check-input" style="color:#00BFFF" type="checkbox" id="policy" name="policy" {{ old('policy', 1) ? 'checked' : '' }} >
                 <span class="form-check-sign">

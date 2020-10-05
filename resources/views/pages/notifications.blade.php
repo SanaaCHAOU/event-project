@@ -14,57 +14,51 @@
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table">
-                
+
                   <thead class=" text-primary">
                     <tr><th>
-                        NOM
+                        DESCRIPTION
                     </th>
                     <th>
-                      Prenom
+                      event_phone
                     </th>
                     <th>
-                      Email
+                      event_email
                     </th>
                     <th >
-                      Category
-                    </th>
-                    <th >
-                      Sujet
+                      	event_address
                     </th>
                     <th class="text-right">
-                      
+
                     </th>
                     <th class="text-right">
-                      
+
                     </th>
                   </tr></thead>
                   <tbody>
-                  
+
                   @foreach($liste as $list)
                     <tr>
                         <td>
-                          {{$list->nom}}
+                          {{$list->description}}
                         </td>
                         <td>
-                        {{$list->prenom}}
+                        {{$list->event_phone}}
                         </td>
                         <td>
-                        {{$list->email}}
+                        {{$list->event_email}}
                         </td>
                         <td>
-                        {{$list->category}}
-                        </td>
-                        <td>
-                        {{$list->sujet}}
+                        {{$list->event_address}}
                         </td>
                         <td>
                         <a href="{{ url('send-mail/'.$list->id)}}" class= "btn btn-primary" name="oui">Accepter</a>
                         </td>
                         <td>
-                      
+
                         <a href="{{ url('/demande/edit/'.$list->id)}}" class="btn btn-danger " name="annuler" type="submit" >Annuler</a></td>
                         </td>
-                       
+
                       </tr>
                       @endforeach
                                         </tbody>
@@ -75,6 +69,3 @@
 
 
 @endsection
-
-
-

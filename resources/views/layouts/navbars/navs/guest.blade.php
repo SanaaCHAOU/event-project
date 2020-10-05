@@ -17,12 +17,12 @@
 
     <div class="collapse navbar-collapse justify-content-end">
    <div id='left'>
-    <span><b> {{ __('Events App') }} </b></span>
+    <span><b> {{ __('Smart Events') }} </b></span>
     </diV>
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="{{ route('home') }}" class="nav-link">
+          <a  class="nav-link">
             {{ __('Home') }}</a>
         </li>
         <li class="nav-item{{ $activePage == 'register' ? ' active' : '' }}">
@@ -39,7 +39,7 @@
           {{ __('Profile') }} </a>
         </li>
         <li class="nav-item">
-          <a href="{{ route('home') }}" class="nav-link">
+          <a class="nav-link">
             {{ __('FAQ') }}
           </a>
         </li>

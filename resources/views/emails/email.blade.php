@@ -4,7 +4,7 @@ Respmail is a response HTML email designed to work
 on all major devices and responsive for smartphones
 that support media queries.
 
-** NOTE **
+* NOTE *
 This template comes with a lot of standard features
 that has been thoroughly tested on major platforms
 and devices, it is extremely flexible to use and
@@ -16,12 +16,12 @@ any changes or adjustments should thoroughly be
 tested and reviewed to match with the general
 structure.
 
-** Profile **
+* Profile *
 Licensed under MIT (https://github.com/charlesmudy/responsive-html-email-template/blob/master/LICENSE)
 Designed by Shina Charles Memud
 Respmail v1.2 (http://charlesmudy.com/respmail/)
 
-** Quick modification **
+* Quick modification *
 We are using width of 500 for the whole content,
 you can change it any size you want (e.g. 600).
 The fastest and safest way is to use find & replace
@@ -101,7 +101,7 @@ Sizes: [
 
 			/* MOBILE STYLES */
 			@media only screen and (max-width: 480px){
-				/*////// CLIENT-SPECIFIC STYLES //////*/
+				/////// CLIENT-SPECIFIC STYLES ///////
 				body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
 
 				/* FRAMEWORK STYLES */
@@ -111,7 +111,7 @@ Sizes: [
 				from rendering media query styles on
 				desktop.
 				*/
-				/*td[class="textContent"], td[class="flexibleContainerCell"] { width: 100%; padding-left: 10px !important; padding-right: 10px !important; }*/
+				/td[class="textContent"], td[class="flexibleContainerCell"] { width: 100%; padding-left: 10px !important; padding-right: 10px !important; }/
 				table[id="emailHeader"],
 				table[id="emailBody"],
 				table[id="emailFooter"],
@@ -255,7 +255,7 @@ Sizes: [
 																			</tr>
 																		</table>
 																	</td>
-																	
+
 																</tr>
 															</table>
 														</td>
@@ -319,8 +319,8 @@ Sizes: [
 																<tr>
 																	<td align="center" valign="top" class="textContent">
 																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">BISD-EVENTS</h1>
-																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#205478;line-height:135%;">Dear {{$liste->nom}} {{$liste->prenom}}</h2>
-																		<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">we have accepted your request to organize the event which has as subject the {{$liste->sujet}} and it is classified with the categories of {{$liste->category}}
+																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#205478;line-height:135%;">Dear {{$liste->description}}</h2>
+																		<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">we have accepted your request to organize the event which has as subject the {{$liste->event_email}} and it is classified with the categories of
 </div>
 																	</td>
 																</tr>
@@ -370,7 +370,7 @@ Sizes: [
 																			</tr>
 																		</table>
 																	</td>
-																	
+
 																</tr>
 															</table>
 															<!-- // CONTENT TABLE -->
@@ -424,7 +424,7 @@ Sizes: [
 
 
 							<!-- MODULE ROW // -->
-							
+
 						</table>
 						<!-- // END -->
 

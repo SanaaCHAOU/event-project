@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Category;
+use App\Categories;
 use App\User;
 use App\DB;
 use App\Demandes;

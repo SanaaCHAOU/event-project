@@ -11,9 +11,9 @@
               <div class="card-icon">
                 <i class="material-icons">content_copy</i>
               </div>
-              <p class="card-category">Ctégories</p>
+              <p class="card-category">Category</p>
                  <h3 class="card-title"> {{ $cat }}
-                 <small>Nombre des catégories</small>
+                 <small>Number of category</small>
               </h3>
             </div>
 
@@ -38,9 +38,9 @@
               <div class="card-icon">
                 <i class="material-icons">assignment</i>
                </div>
-              <p class="card-category">Evenements</p>
-              <h3 class="card-title">5
-                <small>Evenements Acceptés</small>
+              <p class="card-category">Events</p>
+              <h3 class="card-title">{{ $eve }}
+                <small>Accepted Events</small>
               </h3>
             </div>
           </div>
@@ -50,11 +50,11 @@
   <script src="https://code.highcharts.com/highcharts.js"></script>
 
 <script type="text/javascript">
-    var userData = <?php echo json_encode($userData)?>;
+    var userData = <?php echo json_encode($userData ?? '')?>;
 
     Highcharts.chart('container', {
         title: {
-            text: 'New User MBISD-Events, 2020'
+            text: 'New User Smart Events, 2020'
         },
         xAxis: {
             categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',

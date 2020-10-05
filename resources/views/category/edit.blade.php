@@ -32,8 +32,8 @@
                   <label class="col-sm-2 col-form-label">{{ __('Category') }}</label>
                   <div class="col-sm-7">
                     <div>
-                      <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="category"  value="{{ $cat->category }}"/>
-                     
+                      <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="category"  value="{{ $cat->category_label }}""/>
+
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@
                   <div class="col-sm-7">
                     <div>
                       <textarea class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="description">{{ $cat->description }}</textarea>
-            
+
                     </div>
                   </div>
                 </div>

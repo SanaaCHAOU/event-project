@@ -255,7 +255,7 @@ Sizes: [
 																			</tr>
 																		</table>
 																	</td>
-																	
+
 																</tr>
 															</table>
 														</td>
@@ -319,8 +319,8 @@ Sizes: [
 																<tr>
 																	<td align="center" valign="top" class="textContent">
 																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">BISD-EVENTS</h1>
-																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#205478;line-height:135%;">Dear {{$liste->nom}} {{$liste->prenom}}</h2>
-																		<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">we have refused your request to organize the event which has as subject the {{$liste->sujet}} and it is classified with the categories of {{$liste->category}}
+																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#205478;line-height:135%;">Dear {{$liste->event_email}}</h2>
+																		<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">we have refused your request to organize the event which has as subject the {{$liste->description}} and it is classified with the categories of
 </div>
 																	</td>
 																</tr>
@@ -370,7 +370,7 @@ Sizes: [
 																			</tr>
 																		</table>
 																	</td>
-																	
+
 																</tr>
 															</table>
 															<!-- // CONTENT TABLE -->
@@ -424,7 +424,7 @@ Sizes: [
 
 
 							<!-- MODULE ROW // -->
-							
+
 						</table>
 						<!-- // END -->
 

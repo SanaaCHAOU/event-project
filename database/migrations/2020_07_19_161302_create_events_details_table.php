@@ -27,12 +27,12 @@ class CreateEventsDetailsTable extends Migration
             $table->string('event_phone')->nullable(false);
             $table->string('event_email')->nullable(false);
             $table->enum('visibility', ['PRIVATE', 'RESERVED', 'PUBLIC']);
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('id');
             $table->unsignedBigInteger('organiser_id');
             $table->longText('flyer_link');
             $table->timestamps();
 
-            $table->foreign('category_id')->references('category_id')->on('categories');
+            $table->foreign('id')->references('id')->on('categories');
             $table->foreign('organiser_id')->references('user_id')->on('user_details');
         });
     }
